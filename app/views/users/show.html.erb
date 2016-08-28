@@ -1,3 +1,4 @@
 <h1><%= current_user.email %>'s to do list! </h1>
-<p>The list of things I have to do.</p>
 <p>You were last signed in at: <%= current_user.last_sign_in_at %></p>
+<%= render partial: "items/item" %>
+<%= render partial: "items/form" %>
