@@ -10,14 +10,15 @@
   <body>
     <div class="container">
       <ul class="nav nav-tabs">
-        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "My List", root_path %></li>
         <li><%= link_to "About", about_path %></li>
+        <h1 class="text-center">Blocitoff</h1>
         <div class="sign-in pull-right user-info">
-          <% if user_signed_in? %>
+            <% if user_signed_in? %>
             Signed in as:
             <strong><%= current_user.email %></strong>
             |
-            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+            <%= link_to 'Settings', edit_user_registration_path, :class => 'navbar-link' %>
             -
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           <% else %>
@@ -29,7 +30,6 @@
         </div>
       </ul>
     </div>
-    <h1>Blocitoff</h1>
 
     <%= yield %>
 
