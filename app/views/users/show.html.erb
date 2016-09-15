@@ -1,5 +1,12 @@
-<h1><%= current_user.name %>'s to do list! </h1>
-<p>You were last signed in at: <%= current_user.last_sign_in_at %></p>
-<h5><strong>Remember. You only have a week to finish each task! After 7 days your task will be deleted.</strong></h5>
-<%= render partial: "items/item" %>
-<%= render partial: "items/form" %>
+<div class="container">
+  <h1><%= current_user.name %>'s to-do list!</h1>
+  <p>You were last signed in at: <%= current_user.last_sign_in_at.in_time_zone('US/Central').strftime("%-l:%M %p (CT) on %-m/%e/%Y") %></p>
+
+  <h5>
+    <strong>Remember. You only have a week to finish each task! After 7 days your task will be deleted.</strong>
+  </h5>
+
+  <%= render partial: "items/item" %>
+
+  <%= render partial: "items/form" %>
+</div>

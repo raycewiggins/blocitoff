@@ -2,7 +2,7 @@
   <div class="media">
     <div class="media-body">
       <div>-<%= item.name %>
-      <%= link_to "",  user_item_path(current_user, item), method: :delete, class: 'glyphicon glyphicon-ok' %></div>
+      <%= link_to "", user_item_path(@user, item), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></div>
       <div>created <%= distance_of_time_in_words(item.created_at, Time.now) %> ago.</div>
     </div>
   </div>
