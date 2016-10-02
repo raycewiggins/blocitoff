@@ -1,6 +1,6 @@
 standard = User.create!(
-  name: 'Mr. Standard',
-  email: 'standard@example.com',
+  name: 'User',
+  email: 'user@example.com',
   password: 'helloworld'
 )
 
